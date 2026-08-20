@@ -31,7 +31,6 @@
             font-size: 22px;
             letter-spacing: 0.08em;
             font-weight: 400;
-            text-transform: lowercase;
         }
 
         nav {
@@ -69,7 +68,6 @@
             font-weight: 400;
             letter-spacing: -0.06em;
             line-height: 0.85;
-            text-transform: lowercase;
         }
 
         .hero p {
@@ -92,6 +90,16 @@
         }
 
         .work {
+            display: block;
+        }
+
+        .work-image {
+            width: 100%;
+        }
+
+        .work-image img {
+            width: 100%;
+            height: auto;
             display: block;
         }
 
@@ -132,6 +140,7 @@
         }
 
         @media (max-width: 700px) {
+
             header {
                 padding: 25px 20px;
             }
@@ -170,6 +179,7 @@
 <body>
 
 <header>
+
     <div class="logo">róża</div>
 
     <nav>
@@ -177,68 +187,111 @@
         <a href="#about">ABOUT</a>
         <a href="#contact">CONTACT</a>
     </nav>
+
 </header>
+
 
 <main>
 
     <section class="hero">
+
         <h1>róża</h1>
+
         <p>ARTIST / COLLAGE</p>
+
     </section>
 
 
     <section id="work">
 
-        <div class="section-title">Selected Work</div>
+        <div class="section-title">
+            Selected Work
+        </div>
+
 
         <div class="work-grid">
 
+
+            <!-- ARTWORK 01 -->
+
             <div class="work">
+
+                <div class="work-image">
+
+                    <img
+                        src="work-01.jpg"
+                        alt="Untitled, 2026"
+                    >
+
+                </div>
+
+                <div class="work-info">
+
+                    <span>Untitled</span>
+
+                    <span>2026</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- ARTWORK 02 -->
+
+            <div class="work">
+
                 <div class="work-placeholder">
                     YOUR ARTWORK
                 </div>
 
                 <div class="work-info">
+
                     <span>Untitled</span>
+
                     <span>2026</span>
+
                 </div>
+
             </div>
 
 
+            <!-- ARTWORK 03 -->
+
             <div class="work">
+
                 <div class="work-placeholder">
                     YOUR ARTWORK
                 </div>
 
                 <div class="work-info">
+
                     <span>Untitled</span>
+
                     <span>2026</span>
+
                 </div>
+
             </div>
 
 
+            <!-- ARTWORK 04 -->
+
             <div class="work">
+
                 <div class="work-placeholder">
                     YOUR ARTWORK
                 </div>
 
                 <div class="work-info">
+
                     <span>Untitled</span>
+
                     <span>2026</span>
+
                 </div>
+
             </div>
 
-
-            <div class="work">
-                <div class="work-placeholder">
-                    YOUR ARTWORK
-                </div>
-
-                <div class="work-info">
-                    <span>Untitled</span>
-                    <span>2026</span>
-                </div>
-            </div>
 
         </div>
 
@@ -247,18 +300,21 @@
 
     <section id="about" class="about">
 
-        <div class="section-title">About</div>
+        <div class="section-title">
+            About
+        </div>
 
         <p>
             I work primarily with collage, using found images and fragments
             of printed material to create new and sometimes uneasy
             relationships between them. I'm interested in what images carry
-            with them, like familiarity, desire, discomfort, nostalgia
+            with them, like familiarity, desire, discomfort and nostalgia,
             and what happens when they're taken away from the context they
             originally belonged to.
         </p>
 
     </section>
+
 
 </main>
 
@@ -272,6 +328,7 @@
     <span>© 2026</span>
 
 </footer>
+
 
 </body>
 </html>
