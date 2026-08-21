@@ -1,36 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>róża — Artist</title>
+    <title>róża — artist</title>
 
     <style>
+
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: Arial, Helvetica, sans-serif;
             background: #f7f6f2;
-            color: #111;
+            color: #171717;
+            font-family: Arial, Helvetica, sans-serif;
             line-height: 1.5;
         }
 
+
+        /* NAVIGATION */
+
         header {
-            padding: 30px 40px;
+            padding: 28px 38px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
+            z-index: 10;
         }
 
         .logo {
-            font-size: 22px;
-            letter-spacing: 0.08em;
+            font-size: 18px;
             font-weight: 400;
+            letter-spacing: 0.03em;
         }
 
         nav {
@@ -39,153 +50,255 @@
         }
 
         nav a {
-            color: #111;
+            color: #171717;
             text-decoration: none;
-            font-size: 13px;
-            letter-spacing: 0.08em;
+            font-size: 10px;
+            letter-spacing: 0.13em;
+            text-transform: lowercase;
         }
 
         nav a:hover {
-            opacity: 0.5;
+            opacity: 0.45;
         }
+
+
+        /* MAIN */
 
         main {
-            max-width: 1400px;
+            max-width: 1500px;
             margin: 0 auto;
-            padding: 40px;
+            padding: 0 38px;
         }
 
-        .hero {
-            min-height: 65vh;
+
+        /* INTRO */
+
+        .intro {
+            min-height: 72vh;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 40px 0 100px;
+            align-items: flex-end;
+            padding-bottom: 125px;
         }
 
-        .hero h1 {
-            font-size: clamp(70px, 14vw, 190px);
+        .intro-text {
+            max-width: 430px;
+        }
+
+        .intro-name {
+            font-size: clamp(58px, 8vw, 105px);
             font-weight: 400;
             letter-spacing: -0.06em;
-            line-height: 0.85;
+            line-height: 0.9;
         }
 
-        .hero p {
-            margin-top: 35px;
-            font-size: 14px;
-            letter-spacing: 0.08em;
+        .intro-role {
+            margin-top: 25px;
+            font-size: 10px;
+            letter-spacing: 0.14em;
         }
 
-        .section-title {
-            font-size: 12px;
-            letter-spacing: 0.12em;
-            margin-bottom: 35px;
+
+        /* WORK */
+
+        .section-heading {
+            font-size: 9px;
+            letter-spacing: 0.16em;
             text-transform: uppercase;
+            margin-bottom: 55px;
+            color: #555;
         }
 
-        .work-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 35px 25px;
+        .work-list {
+            display: flex;
+            flex-direction: column;
+            gap: 190px;
         }
 
         .work {
-            display: block;
+            display: flex;
+            flex-direction: column;
         }
 
-        .work-image {
+        .image-wrap {
             width: 100%;
         }
 
-        .work-image img {
+        .image-wrap img {
+            display: block;
             width: 100%;
             height: auto;
-            display: block;
         }
 
-        .work-placeholder {
-            aspect-ratio: 4 / 5;
-            background: #deddd8;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #777;
-            font-size: 12px;
-            letter-spacing: 0.08em;
+
+        /* INDIVIDUAL IMAGE SIZES */
+
+        .work-wide {
+            width: 72%;
         }
+
+        .work-medium {
+            width: 58%;
+        }
+
+        .work-small {
+            width: 48%;
+        }
+
+        .work-right {
+            margin-left: auto;
+        }
+
+        .work-centre {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        /* TITLES */
 
         .work-info {
-            padding-top: 12px;
+            margin-top: 13px;
             display: flex;
             justify-content: space-between;
-            font-size: 12px;
+            width: 100%;
+            font-size: 10px;
+            letter-spacing: 0.04em;
         }
+
+        .work-title {
+            font-style: normal;
+        }
+
+        .work-year {
+            color: #666;
+        }
+
+
+        /* ABOUT */
 
         .about {
-            max-width: 700px;
-            padding: 180px 0;
+            max-width: 680px;
+            padding: 260px 0 280px;
         }
 
-        .about p {
-            font-size: 22px;
-            line-height: 1.45;
+        .about-text {
+            font-size: 20px;
+            line-height: 1.55;
+            font-weight: 400;
         }
+
+
+        /* CONTACT */
+
+        .contact {
+            max-width: 500px;
+            padding-bottom: 130px;
+        }
+
+        .contact-text {
+            font-size: 12px;
+            line-height: 1.7;
+        }
+
+        .contact a {
+            color: #171717;
+            text-decoration: none;
+            border-bottom: 1px solid #171717;
+        }
+
+
+        /* FOOTER */
 
         footer {
-            padding: 60px 40px 40px;
+            border-top: 1px solid #d9d7d1;
+            padding: 22px 0 30px;
             display: flex;
             justify-content: space-between;
-            font-size: 11px;
-            letter-spacing: 0.08em;
+            font-size: 9px;
+            letter-spacing: 0.1em;
+            color: #555;
         }
+
+
+        /* MOBILE */
 
         @media (max-width: 700px) {
 
             header {
-                padding: 25px 20px;
+                padding: 24px 20px;
             }
 
             nav {
-                gap: 15px;
+                gap: 17px;
+            }
+
+            nav a {
+                font-size: 9px;
             }
 
             main {
-                padding: 20px;
+                padding: 0 20px;
             }
 
-            .work-grid {
-                grid-template-columns: 1fr;
+            .intro {
+                min-height: 65vh;
+                padding-bottom: 80px;
             }
 
-            .hero {
-                min-height: 60vh;
+            .intro-name {
+                font-size: 64px;
+            }
+
+            .work-list {
+                gap: 100px;
+            }
+
+            .work-wide,
+            .work-medium,
+            .work-small {
+                width: 100%;
+            }
+
+            .work-right,
+            .work-centre {
+                margin-left: 0;
+                margin-right: 0;
             }
 
             .about {
-                padding: 120px 0;
+                padding: 160px 0 180px;
             }
 
-            .about p {
+            .about-text {
                 font-size: 18px;
             }
 
-            footer {
-                padding: 50px 20px 25px;
+            .contact {
+                padding-bottom: 90px;
             }
+
+            footer {
+                padding-bottom: 25px;
+            }
+
         }
+
     </style>
+
 </head>
 
+
 <body>
+
 
 <header>
 
     <div class="logo">róża</div>
 
     <nav>
-        <a href="#work">WORK</a>
-        <a href="#about">ABOUT</a>
-        <a href="#contact">CONTACT</a>
+        <a href="#work">work</a>
+        <a href="#about">about</a>
+        <a href="#contact">contact</a>
     </nav>
 
 </header>
@@ -193,104 +306,239 @@
 
 <main>
 
-    <section class="hero">
 
-        <h1>róża</h1>
+    <!-- INTRO -->
 
-        <p>ARTIST / COLLAGE</p>
+    <section class="intro">
+
+        <div class="intro-text">
+
+            <div class="intro-name">
+                róża
+            </div>
+
+            <div class="intro-role">
+                artist / collage
+            </div>
+
+        </div>
 
     </section>
 
 
+
+    <!-- WORK -->
+
     <section id="work">
 
-        <div class="section-title">
-            Selected Work
+        <div class="section-heading">
+            selected work
         </div>
 
 
-        <div class="work-grid">
+        <div class="work-list">
 
 
-            <!-- ARTWORK 01 -->
+            <!-- HOLLYWOOD -->
 
-            <div class="work">
+            <article class="work">
 
-                <div class="work-image">
+                <div class="image-wrap work-wide">
 
                     <img
                         src="Hollywood - Edited Master_edited_Resized_JPEG.jpg"
                         alt="Hollywood, 2026"
                     >
 
-                </div>
+                    <div class="work-info">
 
-                <div class="work-info">
+                        <span class="work-title">
+                            Hollywood
+                        </span>
 
-                    <span>Hollywood</span>
+                        <span class="work-year">
+                            2026
+                        </span>
 
-                    <span>2026</span>
-
-                </div>
-
-            </div>
-
-
-            <!-- ARTWORK 02 -->
-
-            <div class="work">
-
-                <div class="work-placeholder">
-                    YOUR ARTWORK
-                </div>
-
-                <div class="work-info">
-
-                    <span>Untitled</span>
-
-                    <span>2026</span>
+                    </div>
 
                 </div>
 
-            </div>
+            </article>
 
 
-            <!-- ARTWORK 03 -->
 
-            <div class="work">
+            <!-- WORLD -->
 
-                <div class="work-placeholder">
-                    YOUR ARTWORK
-                </div>
+            <article class="work">
 
-                <div class="work-info">
+                <div class="image-wrap work-medium work-right">
 
-                    <span>Untitled</span>
+                    <img
+                        src="World - Master - JPEG.jpg"
+                        alt="World, 2026"
+                    >
 
-                    <span>2026</span>
+                    <div class="work-info">
 
-                </div>
+                        <span class="work-title">
+                            World
+                        </span>
 
-            </div>
+                        <span class="work-year">
+                            2026
+                        </span>
 
-
-            <!-- ARTWORK 04 -->
-
-            <div class="work">
-
-                <div class="work-placeholder">
-                    YOUR ARTWORK
-                </div>
-
-                <div class="work-info">
-
-                    <span>Untitled</span>
-
-                    <span>2026</span>
+                    </div>
 
                 </div>
 
-            </div>
+            </article>
+
+
+
+            <!-- RED -->
+
+            <article class="work">
+
+                <div class="image-wrap work-wide">
+
+                    <img
+                        src="Red-Master-JPEG.jpg"
+                        alt="Red, 2026"
+                    >
+
+                    <div class="work-info">
+
+                        <span class="work-title">
+                            Red
+                        </span>
+
+                        <span class="work-year">
+                            2026
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ROPE -->
+
+            <article class="work">
+
+                <div class="image-wrap work-small work-centre">
+
+                    <img
+                        src="Rope - Master - jpeg.jpg"
+                        alt="Rope, 2026"
+                    >
+
+                    <div class="work-info">
+
+                        <span class="work-title">
+                            Rope
+                        </span>
+
+                        <span class="work-year">
+                            2026
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- MONKS -->
+
+            <article class="work">
+
+                <div class="image-wrap work-wide work-right">
+
+                    <img
+                        src="Monks - JPEG - Master.jpg"
+                        alt="Monks, 2026"
+                    >
+
+                    <div class="work-info">
+
+                        <span class="work-title">
+                            Monks
+                        </span>
+
+                        <span class="work-year">
+                            2026
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- COLD -->
+
+            <article class="work">
+
+                <div class="image-wrap work-medium">
+
+                    <img
+                        src="Cold - Master- JPEG.jpg"
+                        alt="Cold, 2026"
+                    >
+
+                    <div class="work-info">
+
+                        <span class="work-title">
+                            Cold
+                        </span>
+
+                        <span class="work-year">
+                            2026
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- LIGHT -->
+
+            <article class="work">
+
+                <div class="image-wrap work-wide work-centre">
+
+                    <img
+                        src="Light - Master JPEG.jpg"
+                        alt="Light, 2026"
+                    >
+
+                    <div class="work-info">
+
+                        <span class="work-title">
+                            Light
+                        </span>
+
+                        <span class="work-year">
+                            2026
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
 
 
         </div>
@@ -298,36 +546,67 @@
     </section>
 
 
+
+    <!-- ABOUT -->
+
     <section id="about" class="about">
 
-        <div class="section-title">
-            About
+        <div class="section-heading">
+            about
         </div>
 
-        <p>
+        <p class="about-text">
+
             I work primarily with collage, using found images and fragments
             of printed material to create new and sometimes uneasy
             relationships between them. I'm interested in what images carry
             with them, like familiarity, desire, discomfort and nostalgia,
             and what happens when they're taken away from the context they
             originally belonged to.
+
         </p>
 
     </section>
 
 
+
+    <!-- CONTACT -->
+
+    <section id="contact" class="contact">
+
+        <div class="section-heading">
+            contact
+        </div>
+
+        <p class="contact-text">
+
+            For exhibition enquiries, collaborations and professional
+            opportunities.
+
+            <br><br>
+
+            <a href="mailto:studio@rozafry.com">
+                studio@rozafry.com
+            </a>
+
+        </p>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <span>róża</span>
+
+        <span>© 2026</span>
+
+    </footer>
+
+
 </main>
-
-
-<footer id="contact">
-
-    <span>róża</span>
-
-    <span>CONTACT — EMAIL</span>
-
-    <span>© 2026</span>
-
-</footer>
 
 
 </body>
